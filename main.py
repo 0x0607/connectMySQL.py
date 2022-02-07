@@ -15,7 +15,7 @@ class mysql():
             cursorclass=pymysql.cursors.DictCursor
             db = pymysql.connect(host=self.host,port=self.port,user=self.user,password=self.password,database=database,charset=charset,cursorclass=cursorclass)
             # print('DataBase version: {}'.format(db.cursor().execute("SELECT VERSION()")))
-            db.close
+            db.close()
             return True
         except:
             print('[WARN] Failed to connect {}:{}'.format(self.host,self.port))
